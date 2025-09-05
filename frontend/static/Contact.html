@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Best Cars</title>
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d0f14;
+      color: #fff;
+    }
+
+    /* Navbar */
+    .custom-navbar {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(12px);
+      padding: 15px 30px;
+    }
+    .custom-navbar .navbar-brand {
+      color: #ffcc00 !important;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+    .custom-navbar .nav-link {
+      color: white !important;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .custom-navbar .nav-link:hover,
+    .custom-navbar .nav-link.active {
+      color: #ffcc00 !important;
+    }
+
+    /* Hero */
+    .contact-hero {
+      background: url('/static/car_showroom.jpg') center/cover no-repeat;
+      padding: 160px 20px 120px;
+      text-align: center;
+      position: relative;
+    }
+    .contact-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(13,15,20,0.9));
+    }
+    .contact-header-text {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+      color: white;
+      animation: fadeInUp 1.2s ease;
+    }
+    .contact-header-text h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .contact-header-text p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 70px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      padding: 40px;
+      max-width: 1000px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+    .contact-card img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+    .contact-info h3 {
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+    .contact-info p {
+      margin: 12px 0;
+      font-size: 1.1rem;
+    }
+    .contact-info a {
+      color: #00b4d8;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .contact-info a:hover {
+      color: #ffcc00;
+    }
+    .contact-info i {
+      margin-right: 10px;
+      color: #ffcc00;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Dealerships</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="contact-hero">
+    <div class="contact-header-text">
+      <h1>Contact Us</h1>
+      <p>Drive your dream with confidence. Our team is here to assist you 24/7.</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-card">
+      <img src="/static/contact_team.jpg" alt="Contact Team">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><i class="fa-solid fa-envelope"></i><strong>Email:</strong> <a href="mailto:support@bestcars.com">support@bestcars.com</a></p>
+        <p><i class="fa-solid fa-phone"></i><strong>Phone:</strong> +91 98765 43210</p>
+        <p><i class="fa-solid fa-building"></i><strong>Head Office:</strong> 123 Luxury Street, Mumbai, India</p>
+        <p><i class="fa-solid fa-briefcase"></i><strong>Business Inquiries:</strong> <a href="mailto:PR@bestcars.com">PR@bestcars.com</a></p>
+        <p><i class="fa-solid fa-car"></i><strong>Dealership Partners:</strong> <a href="#">growwithbestcars.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="/static/bootstrap.bundle.min.js"></script>
+</body>
+</html>
